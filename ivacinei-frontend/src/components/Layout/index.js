@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   AppShell,
   Navbar,
   Header,
-  Footer,
-  Aside,
   Text,
   MediaQuery,
   Burger,
   useMantineTheme,
-} from '@mantine/core';
-import { Outlet } from 'react-router-dom';
-import { MainLinks } from '../MainLinks';
+} from "@mantine/core";
+import { Outlet } from "react-router-dom";
+import { MainLinks } from "../MainLinks";
 
 export default function AppShellDemo() {
   const theme = useMantineTheme();
@@ -20,32 +18,34 @@ export default function AppShellDemo() {
     <AppShell
       styles={{
         main: {
-          background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+          background:
+            theme.colorScheme === "dark"
+              ? theme.colors.dark[8]
+              : theme.colors.gray[0],
         },
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
       fixed
       navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
+        <Navbar
+          p="md"
+          hiddenBreakpoint="sm"
+          hidden={!opened}
+          width={{ sm: 150, lg: 200 }}
+        >
           <Navbar.Section grow mt="xs">
             <MainLinks />
           </Navbar.Section>
-          <Navbar.Section>
-         {/*  <User /> */}
-          </Navbar.Section>
+          <Navbar.Section>{/*  <User /> */}</Navbar.Section>
         </Navbar>
       }
-      
-      footer={
-        <Footer height={60} p="md">
-          Application footer
-        </Footer>
-      }
       header={
-        <Header height={70} p="md">
-          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-            <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+        <Header height={50} p="md">
+          <div
+            style={{ display: "flex", alignItems: "center", height: "100%" }}
+          >
+            <MediaQuery largerThan="sm" styles={{ display: "none" }}>
               <Burger
                 opened={opened}
                 onClick={() => setOpened((o) => !o)}
@@ -55,7 +55,7 @@ export default function AppShellDemo() {
               />
             </MediaQuery>
 
-            <Text>Application header</Text>
+            <Text>iVacinei Portal</Text>
           </div>
         </Header>
       }
