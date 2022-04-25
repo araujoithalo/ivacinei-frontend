@@ -3,7 +3,6 @@ import {
   GitPullRequest,
   AlertCircle,
   Messages,
-  Database,
 } from "tabler-icons-react";
 import { ThemeIcon, UnstyledButton, Group, Text } from "@mantine/core";
 import { useNavigate } from "react-router-dom";

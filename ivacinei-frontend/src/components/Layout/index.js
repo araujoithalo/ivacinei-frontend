@@ -32,7 +32,7 @@ export default function AppShellDemo() {
           p="md"
           hiddenBreakpoint="sm"
           hidden={!opened}
-          width={{ sm: 150, lg: 200 }}
+          width={{ sm: 200, lg: 300 }}
         >
           <Navbar.Section grow mt="xs">
             <MainLinks />
@@ -41,7 +41,7 @@ export default function AppShellDemo() {
         </Navbar>
       }
       header={
-        <Header height={50} p="md">
+        <Header height={70} p="md">
           <div
             style={{ display: "flex", alignItems: "center", height: "100%" }}
           >
@@ -55,13 +55,13 @@ export default function AppShellDemo() {
               />
             </MediaQuery>
 
-            <Text>iVacinei Portal</Text>
+            <Text>iVacinei</Text>
           </div>
         </Header>
       }
     >
-      <Text>Resize app to see responsive navbar in action</Text>
       <Outlet></Outlet>
     </AppShell>
   );
 }
+
