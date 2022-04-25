@@ -1,5 +1,5 @@
 import { Input, InputWrapper, Button } from "@mantine/core";
-import { DatePicker } from "@mantine/dates";
+import { DatePicker, TimeInput } from "@mantine/dates";
 import { useState } from "react";
 
 const Session = () => {
@@ -40,12 +40,15 @@ const Session = () => {
         mb={8}
         id="vacDate"
         name="vacDate"
-        onChange={(value) => onChange({ target : { name: "vacDate"}})}
+        onChange={(value) => onChange({ target: { name: "vacDate" } })}
         value={form.vacDate}
         placeholder="Pick up a date"
         label="Select a date to schedule your vaccine"
         required
       />
+
+      <TimeInput id="vacTimer" onChange={(value) => onChange({ target: { name: "vacTimer" } })}
+        value={form.vacTimer} defaultValue={new Date()} label="Select an hour" required />
 
       <Button mt={16}>Create</Button>
     </>
