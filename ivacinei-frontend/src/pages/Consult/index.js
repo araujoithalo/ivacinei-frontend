@@ -1,4 +1,4 @@
-import { Table } from "@mantine/core";
+import { Table, Checkbox } from "@mantine/core";
 import { useEffect, useState } from "react";
 import axios from "../../services/api";
 
@@ -38,28 +38,30 @@ const Consult = () => {
   ]);
 
   return (
-    <Table highlightOnHover>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Button</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.map((user, index) => (
-          <tr key={index}>
-            <td>{user.name}</td>
-            <td>{user.vdate}</td>
-            <td>{user.vtimer}</td>
-            <td>{user.vbutton}</td>
-            <td>{user.status}</td>
+    <>
+      <Table highlightOnHover>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Button</th>
+            <th>Status</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          {users.map((user, index) => (
+            <tr key={index}>
+              <td>{user.name}</td>
+              <td>{user.vdate}</td>
+              <td>{user.vtimer}</td>
+              <td><Checkbox label="Finalized"/></td>
+              <td>{user.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </>
   );
 };
 
