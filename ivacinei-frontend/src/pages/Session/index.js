@@ -47,8 +47,14 @@ const Session = () => {
         required
       />
 
-      <TimeInput id="vacTimer" onChange={(value) => onChange({ target: { name: "vacTimer" } })}
-        value={form.vacTimer} defaultValue={new Date()} label="Select an hour" required />
+      <TimeInput
+        id="vacTimer"
+        onChange={(value) => onChange({ target: { name: "vacTimer" } })}
+        value={form.vacTimer}
+        defaultValue={new Date()}
+        label="Select an hour"
+        required
+      />
 
       <Button mt={16}>Create</Button>
     </>
